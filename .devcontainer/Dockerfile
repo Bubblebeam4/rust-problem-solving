@@ -8,7 +8,6 @@ RUN apt-get update && apt-get upgrade -y \
 
 # Desktop lite
 COPY library-scripts/desktop-lite-debian.sh /tmp/library-scripts/
-COPY fluxbox /home/vscode/.fluxbox/
 RUN apt-get update \
     && bash /tmp/library-scripts/desktop-lite-debian.sh \
     && chown -R vscode /home/vscode
